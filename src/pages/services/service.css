@@ -1,0 +1,76 @@
+.contain .box{
+    position: relative;
+    width: 320px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    transition: .5s;
+}
+
+.contain .box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: .5s;
+}
+
+.contain .box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: .5s;
+    filter: blur(30px);
+}
+
+.contain .box:hover:before,
+.contain .box:hover:after{
+    transform: skewX(0deg);
+    left: 45px;
+    width: calc(100% - 90px);
+}
+
+.contain .box:before,
+.contain .box:after{
+    background: linear-gradient(315deg, #9621b9, #2b54db);
+}
+
+.contain .box .content{
+    z-index: 1;
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 5px 15px #ffffff26;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+    color: #fff;
+}
+
+.contain .box:hover .content{
+    padding: 60px 40px;
+}
+
+.icon2{
+    animation: icon 4s linear infinite;
+}
+
+@keyframes icon{
+    100%{
+        transform: rotate(360deg);
+    }
+}

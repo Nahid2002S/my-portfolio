@@ -1,0 +1,69 @@
+.ball {
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    animation: spinBall 0.13s linear infinite;
+    box-shadow: inset 0 0 18px #fff,
+        inset 6px 0 18px violet,
+        inset -6px 0 18px #0ff,
+        inset 6px 0 30px violet,
+        inset -6px 0 30px #0ff,
+        0 0 18px #fff, -4px
+        0 18px violet, 4px 0 18px #0ff;
+}
+ 
+@keyframes spinBall {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.photo{
+    animation: photo 3s linear infinite;
+}
+
+@keyframes photo{
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+.react{
+    animation: react 5s linear infinite;
+}
+
+@keyframes react{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.node{
+    animation: node 4s linear infinite;
+}
+
+@keyframes node{
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+.express{
+    animation: express 3s linear infinite;
+}
+
+@keyframes express{
+    50%{
+        transform: translateX(-5px);
+    }
+}
+.mongodb{
+    transform: rotate(-30deg);
+    animation: mongodb 3s linear infinite;
+}
+
+@keyframes mongodb{
+    50%{
+        transform: translateY(-5px);
+    }
+}

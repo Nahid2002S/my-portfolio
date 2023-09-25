@@ -1,0 +1,38 @@
+.image-wrap {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+.image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: all 1s ease-in-out;
+}
+.image-wrap:hover img {
+    object-position: bottom center;
+}
+
+.skewCard{
+    transform: skew(-6deg);
+}
+
+.skewCard::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -3px;
+    width: 4px;
+    height: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #36ddf3, transparent);
+    box-shadow: 5px 10px 15px #36ddf3;
+    animation: height 25s linear infinite;
+}
+
+@keyframes height{
+    50%{
+        height: 100%;
+    }
+}
